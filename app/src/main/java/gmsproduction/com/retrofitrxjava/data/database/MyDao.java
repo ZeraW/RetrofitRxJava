@@ -23,7 +23,7 @@ public interface MyDao {
     LiveData<List<Datum>> getUsers();
 
     @Insert(onConflict = REPLACE)
-    void addUser2(List<Datum>[] users);
+    void addUser2(List<Datum>users);
 
    /* @Delete
     void deleteUser(Datum users);
