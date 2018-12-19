@@ -16,10 +16,6 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by Hima on 10/31/2018.
- */
-
 public class RetrofitClient {
     private static Retrofit retrofit = null;
     private static int REQUEST_TIMEOUT = 60;

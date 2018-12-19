@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.BindViews;
+import butterknife.ButterKnife;
 import gmsproduction.com.retrofitrxjava.Model.Datum;
 import gmsproduction.com.retrofitrxjava.R;
 
@@ -51,13 +54,17 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
 
     public class PostViewHolder extends RecyclerView.ViewHolder {
-        TextView txt_title, txt_content, txt_author;
+        @BindView(R.id.text_title)
+        TextView txt_title;
+        @BindView(R.id.text_content)
+        TextView txt_content;
+        @BindView(R.id.text_author)
+        TextView  txt_author;
+
 
         public PostViewHolder(View itemView) {
             super(itemView);
-            txt_title = itemView.findViewById(R.id.text_title);
-            txt_content = itemView.findViewById(R.id.text_content);
-            txt_author = itemView.findViewById(R.id.text_author);
+            ButterKnife.bind(this, itemView);
         }
     }
 }
