@@ -79,10 +79,8 @@ public class UserRepository {
                 }));
     }
 
-
     public void onStopClear(){
         compositeDisposable.clear();
     }
-
 
 }
